@@ -1,0 +1,105 @@
+body {
+    padding: 30vh 1em 0;
+    background: #f6f2e7;
+  }
+  
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .center {
+    margin: 0 auto;
+  }
+  
+  .large {
+    width: 30vmin;
+  }
+  
+  h1 {
+    font-size: 8vmin;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Helvetica, sans-serif;
+    color: #1f74fb;
+  }
+  
+  .glow {
+    position: relative;
+  }
+  .glow::before {
+    content: "";
+    display: block;
+    border-radius: 50%;
+    width: 100%;
+    padding-bottom: 100%;
+    position: absolute;
+    top: -30%;
+    left: 0;
+    background: #ffac33;
+    z-index: -1;
+    -webkit-animation: glow 4s infinite;
+            animation: glow 4s infinite;
+  }
+  .glow::after {
+    content: "";
+    display: block;
+    border-radius: 50%;
+    width: 100%;
+    padding-bottom: 50%;
+    position: absolute;
+    top: 55%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: -1;
+    -webkit-animation: glow 4s infinite;
+            animation: glow 4s infinite;
+  }
+  
+  @-webkit-keyframes glow {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: .4;
+    }
+    50% {
+      -webkit-transform: scale(1.25);
+              transform: scale(1.25);
+      opacity: .2;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: .4;
+    }
+  }
+  
+  @keyframes glow {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: .4;
+    }
+    50% {
+      -webkit-transform: scale(1.25);
+              transform: scale(1.25);
+      opacity: .2;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: .4;
+    }
+  }
+
+#next{
+    width: 470px;
+    height: 140px;
+    font-size: 85px;
+    position: absolute; /* postulat de départ */
+    top: 85%; left: 50%; /* à 50%/50% du parent référent */
+    transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+    border: solid 10px #1f74fb;
+    border-radius: 25px;
+    background-color: #92ceff;
+    cursor:pointer;
+}
