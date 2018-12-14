@@ -9,29 +9,29 @@ $( document ).ready(function() {
         $('.gifts').append('<div class="gift"><div id="circle"> <div id="gift"><div id="ribbon"></div><div id="giftbox"></div></div></div></div>');
         $('.gifts').append('<div class="gift"><div id="circle"> <div id="gift"><div id="ribbon"></div><div id="giftbox"></div></div></div></div>');
         $('.gifts').append('<div class="gift"><div id="circle"> <div id="gift"><div id="ribbon"></div><div id="giftbox"></div></div></div></div>');
-        $('.gift').on('click',function(){
-            $(this).html('<img src="https://i1.wp.com/img13.deviantart.net/d313/i/2014/201/1/4/harry_potter__hi_res_logo_design__by_brodyblue-d7rgv5m.png"><audio autoplay src="assets/gnutrdpfg.mp3"></audio>');
-        })
+       
     });
 
 
 })
-const year = (new Date().getFullYear());
-timeGift = new Date(year, 11, 19).getTime();
-const today = new Date().getTime();
-if(timeGift < today){
-    timeGift = new Date(year, 11, 20).getTime();
-    if(timeGift < today){
-        timeGift = new Date(year, 11, 21).getTime();
-        if(timeGift < today){
-            timeGift = new Date(year, 11, 22).getTime();
-        }
-    }
-    
-}
+
 // countdown
 let timer = setInterval(function() {
 
+    const year = (new Date().getFullYear());
+    timeGift = new Date(year, 11, 19).getTime();
+    const today = new Date().getTime();
+    if(timeGift < today){
+        timeGift = new Date(year, 11, 20).getTime();
+        if(timeGift < today){
+            timeGift = new Date(year, 11, 21).getTime();
+            if(timeGift < today){
+                timeGift = new Date(year, 11, 22).getTime();
+            }
+        }
+        
+    }
+    
   // get the difference
   const diff = timeGift - today;
 
