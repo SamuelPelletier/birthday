@@ -320,7 +320,7 @@ click1 = click2 = click3 = click4 = false;
         $('.gift').on('click',function(){
             switch ($(this).get(0).id) {
                 case 'number-1':
-                    if(timeGift1 > today && click1 == false){
+                    if(timeGift1 < today && click1 == false){
                         $('audio').remove();
                         $(this).children("#circle").hide()
                         $(this).append('<img src="assets/rfgudhfd.png"><audio autoplay src="assets/gnutrdpfg.mp3"></audio>');
@@ -333,7 +333,7 @@ click1 = click2 = click3 = click4 = false;
                     }
                     break;
                 case 'number-2':
-                    if(timeGift2 > today && click2 == false){
+                    if(timeGift2 < today && click2 == false){
                         $('audio').remove();
                         $(this).children("#circle").hide()
                         $(this).append('<img src="assets/jfdhbvhjebfd.png"><audio autoplay src="assets/hfgvjhdbvhf.mp3"></audio>');
@@ -346,7 +346,7 @@ click1 = click2 = click3 = click4 = false;
                     }
                     break;
                 case 'number-3':
-                    if(timeGift3 > today && click3 == false){
+                    if(timeGift3 < today && click3 == false){
                         $('audio').remove();
                         $(this).children("#circle").hide()
                         $(this).append('<img src="assets/rgrtgrtg.png"><audio autoplay src="assets/rfdferfer.mp3"></audio>');
@@ -359,7 +359,7 @@ click1 = click2 = click3 = click4 = false;
                     }
                     break;
                 case 'number-4':
-                    if(timeGift4 > today && click4 == false){
+                    if(timeGift4 < today && click4 == false){
                         $('audio').remove();
                         $(this).children("#circle").hide()
                         $(this).append('<img src="assets/bfdjhbfdbfd.png"><audio autoplay src="assets/bfdjbfvd.mp3"></audio>');
